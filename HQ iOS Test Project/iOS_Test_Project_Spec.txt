@@ -1,0 +1,31 @@
+iOS Test Project
+
+Before you start:
+
+All code needs to be written in Objective-C. All code needs to work on an actual device. There “might” be some small issues with the JSON data we have provided in the country_data.json.
+
+Requirements of the test:
+
+1) Read these instructions carefully.
+
+2) Create a new iOS project
+
+3) Take the JSON data provided country_data.json and add it to your project. This JSON contains all the data you will need to be able to complete the task.
+
+4) We would like you to display all the Country names from the country_data.json in a list that the user can interact with. Each country should also display the flag for that country. The URL to the flag image is included in the country_data.json. 
+
+5) Clicking on a country name should take the user to the city list for that country.
+
+6) We would like you to display all of the city names for a country, in a list that a user can interact with. 
+
+7) Clicking a city should allow the user to see details of the 5 days weather forecast for that city.
+
+8) The user should be able to see the icon that is attached to the forecast for that day.
+
+9) The user should also be able to see the maximum temperature (JSON parameter “tempMaxCelcius”), the minimum temperature (JSON parameter “tempMinCelcius”) and the summery (JSON parameter “summary”) for each of the days. 
+
+10) Once completed, please .zip the whole project and send it to antony.collins@hotelquickly.com with your name and job position applied for as the subject of the e-mail.
+
+11) Good luck!! and happy coding ;)
+
+
