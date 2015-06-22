@@ -24,7 +24,7 @@ Requirements of the test:
 
 9) The user should also be able to see the maximum temperature (JSON parameter “tempMaxCelcius”), the minimum temperature (JSON parameter “tempMinCelcius”) and the summery (JSON parameter “summary”) for each of the days. 
 
-10) Once completed, please .zip the whole project and send it to antony.collins@hotelquickly.com with your name and job position applied for as the subject of the e-mail.
+10) Once completed, please open a pull request in Git and email antony.collins[at]hotelquickly[dot]com with your name and position applied for as the subject.
 
 11) Good luck!! and happy coding ;)
 
