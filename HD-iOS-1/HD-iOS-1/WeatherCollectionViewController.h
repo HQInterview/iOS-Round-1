@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 
+@property (nonatomic, strong)NSString* cityName;
 @property (nonatomic, strong)NSArray* weatherArray;
 @property (nonatomic, strong)Weather* currentWeather;
 

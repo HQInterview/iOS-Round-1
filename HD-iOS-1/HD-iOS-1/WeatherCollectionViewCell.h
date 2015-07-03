@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *summaryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *temperature;
 @property (weak, nonatomic) IBOutlet UILabel *tempMaxMin;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 
 @end

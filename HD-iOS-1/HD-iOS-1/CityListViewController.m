@@ -48,7 +48,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"%d", (int)[self.citiesArray count]);
     return [self.citiesArray count];
 }
 
@@ -57,9 +56,9 @@
     CityCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"CityCell"];
     
     City* cityObj = [self.citiesArray objectAtIndex:indexPath.row];
-    NSLog(@"%@", cityObj.cityName);
     cell.cityNameLabel.text = cityObj.cityName;
     cell.backgroundColor = [UIColor clearColor];
+    
     return cell;
 }
 
@@ -82,8 +81,9 @@
     if ([[segue identifier] isEqualToString:@"weatherView"]) {
         WeatherCollectionViewController* vc = [segue destinationViewController];
         NSIndexPath* index = [self.tableView indexPathForSelectedRow];
+        
         City* targetCity= [self.citiesArray objectAtIndex:index.row];
-        NSLog(@" summaryyy %@", targetCity.currentWeather.summary);
+        vc.cityName = targetCity.cityName;
         vc.currentWeather = targetCity.currentWeather;
         vc.weatherArray = [targetCity.weatherArray copy];
     }
