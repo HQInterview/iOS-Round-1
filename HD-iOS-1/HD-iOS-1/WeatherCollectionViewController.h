@@ -19,5 +19,6 @@
 @property (nonatomic, strong)NSArray* weatherArray;
 @property (nonatomic, strong)Weather* currentWeather;
 
+-(UIColor *)getColorFromWeather:(NSString *) condition;
 
 @end

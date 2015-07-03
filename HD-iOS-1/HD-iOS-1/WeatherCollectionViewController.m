@@ -26,6 +26,7 @@ static NSString * const reuseIdentifier = @"WeatherCell";
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self.collectionView setDataSource:self];
     [self.collectionView setDelegate:self];
 }
@@ -35,6 +36,19 @@ static NSString * const reuseIdentifier = @"WeatherCell";
     // Dispose of any resources that can be recreated.
 }
 
+-(UIColor *)getColorFromWeather:(NSString *) condition
+{
+    if ([condition isEqualToString:@"Clear"]){
+        return [UIColor colorWithRed:226.0/255.0 green:198.0/255.0 blue:75.0/255.0 alpha:1.0];
+    }else if([condition isEqualToString:@"Rain"]) {
+        return [UIColor colorWithRed:41.0/255.0 green:146.0/255.0 blue:177.0/255.0 alpha:1.0];
+    } else if([condition isEqualToString:@"Clouds"]) {
+        return [UIColor colorWithRed:184.0/255.0 green:202.0/255.0 blue:209.0/255.0 alpha:1.0];
+    } else if([condition isEqualToString:@"Snow"]) {
+        return [UIColor grayColor];
+    }
+    return [UIColor redColor];
+}
 /*
 #pragma mark - Navigation
 
@@ -60,20 +74,19 @@ static NSString * const reuseIdentifier = @"WeatherCell";
     WeatherCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"WeatherCell" forIndexPath:indexPath];
     // Configure the cell
     Weather* targetWeather = nil;
+    
     if (indexPath.row == 0){
-        NSLog(@"%@", self.currentWeather.timeString);
         targetWeather = self.currentWeather;
-        cell.headerLabel.text = @"Bangkok";
+        cell.headerLabel.text = self.cityName;
         
     } else {
-        
-        NSLog(@"%ld", indexPath.row - 1);
         targetWeather = [self.weatherArray objectAtIndex:indexPath.row - 1];
         cell.headerLabel.text = targetWeather.timeString;
     }
-    cell.summaryLabel.text  = self.currentWeather.summary;
-    cell.temperature.text = self.currentWeather.tempCelsiusString;
-    cell.tempMaxMin.text = [NSString stringWithFormat:@"%@/%@", self.currentWeather.tempMaxCelciusString, self.currentWeather.tempMinCelciusString];
+    
+    cell.summaryLabel.text  = targetWeather.summary;
+    cell.temperature.text = targetWeather.tempCelsiusString;
+    cell.tempMaxMin.text = [NSString stringWithFormat:@"%@/%@", targetWeather.tempMaxCelciusString, targetWeather.tempMinCelciusString];
     
     ImageCache* imgCache = [ImageCache sharedInstance];
     UIImage* image = [imgCache loadImage:[NSURL URLWithString:targetWeather.iconURL]];
@@ -84,6 +97,8 @@ static NSString * const reuseIdentifier = @"WeatherCell";
         [imgCache cacheImage:[NSURL URLWithString:targetWeather.iconURL] image:image];
         cell.imageView.image = image;
     }
+    
+    cell.bgView.backgroundColor = [self getColorFromWeather:targetWeather.summary];
     cell.bgView.layer.cornerRadius = 5;
     cell.bgView.layer.masksToBounds = YES;
     return cell;
@@ -124,7 +139,7 @@ static NSString * const reuseIdentifier = @"WeatherCell";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     return CGSizeMake([[UIScreen mainScreen] bounds].size.width/2 - 2,
-                      [[UIScreen mainScreen] bounds].size.height/3);
+                      [[UIScreen mainScreen] bounds].size.height/3 + 5);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 0.0;
