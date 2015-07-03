@@ -76,9 +76,16 @@
     return indexPath;
 }
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    if ([[segue identifier] isEqualToString:@"weatherView"]) {
+        WeatherCollectionViewController* vc = [segue destinationViewController];
+        NSIndexPath* index = [self.tableView indexPathForSelectedRow];
+        City* targetCity= [self.citiesArray objectAtIndex:index.row];
+        NSLog(@" summaryyy %@", targetCity.currentWeather.summary);
+        vc.currentWeather = targetCity.currentWeather;
+        vc.weatherArray = [targetCity.weatherArray copy];
+    }
 }
-
 @end
