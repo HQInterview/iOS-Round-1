@@ -19,8 +19,6 @@
 @property (nonatomic, strong) NSMutableArray* countriesArray;
 @property (nonatomic, weak) ImageCache* myImageCache;
 
-
--(IBAction)unwindFromCityListViewController:(UIStoryboardSegue *)sender;
 -(void) fetchJSON;
 -(void) backdroundLoadImage:(NSURL *)imgURL;
 @end

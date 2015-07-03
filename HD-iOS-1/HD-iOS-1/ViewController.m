@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-- (IBAction)unwindFromCityListViewController:(UIStoryboardSegue *)sender {
+- (IBAction)unwindToViewController:(UIStoryboardSegue *)sender {
 
 }
 
