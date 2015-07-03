@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2195809F1B465E94007C399B /* country_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2195809E1B465E94007C399B /* country_data.json */; };
+		219580A21B46812A007C399B /* WeatherCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219580A11B46812A007C399B /* WeatherCollectionViewController.m */; };
+		219580A51B469919007C399B /* WeatherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 219580A41B469919007C399B /* WeatherCollectionViewCell.m */; };
 		96E0EF631B456D53003607E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EF621B456D53003607E8 /* main.m */; };
 		96E0EF661B456D53003607E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EF651B456D53003607E8 /* AppDelegate.m */; };
 		96E0EF691B456D53003607E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EF681B456D53003607E8 /* ViewController.m */; };
@@ -14,7 +17,6 @@
 		96E0EF6E1B456D54003607E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E0EF6D1B456D54003607E8 /* Images.xcassets */; };
 		96E0EF711B456D54003607E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E0EF6F1B456D54003607E8 /* LaunchScreen.xib */; };
 		96E0EF7D1B456D54003607E8 /* HD_iOS_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EF7C1B456D54003607E8 /* HD_iOS_1Tests.m */; };
-		96E0EF871B456D7A003607E8 /* country_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 96E0EF861B456D7A003607E8 /* country_data.json */; };
 		96E0EF8C1B457A24003607E8 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EF8B1B457A24003607E8 /* Country.m */; };
 		96E0EF8F1B457E35003607E8 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EF8E1B457E35003607E8 /* City.m */; };
 		96E0EF921B457F5D003607E8 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EF911B457F5D003607E8 /* Weather.m */; };
@@ -35,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2195809E1B465E94007C399B /* country_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country_data.json; sourceTree = "<group>"; };
+		219580A01B46812A007C399B /* WeatherCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCollectionViewController.h; sourceTree = "<group>"; };
+		219580A11B46812A007C399B /* WeatherCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewController.m; sourceTree = "<group>"; };
+		219580A31B469919007C399B /* WeatherCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCollectionViewCell.h; sourceTree = "<group>"; };
+		219580A41B469919007C399B /* WeatherCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewCell.m; sourceTree = "<group>"; };
 		96E0EF5D1B456D53003607E8 /* HD-iOS-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HD-iOS-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E0EF611B456D53003607E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E0EF621B456D53003607E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,7 +55,6 @@
 		96E0EF761B456D54003607E8 /* HD-iOS-1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HD-iOS-1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E0EF7B1B456D54003607E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E0EF7C1B456D54003607E8 /* HD_iOS_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HD_iOS_1Tests.m; sourceTree = "<group>"; };
-		96E0EF861B456D7A003607E8 /* country_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country_data.json; sourceTree = "<group>"; };
 		96E0EF8A1B457A24003607E8 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		96E0EF8B1B457A24003607E8 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		96E0EF8D1B457E35003607E8 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
@@ -107,16 +113,18 @@
 				96E0EF9E1B4638F7003607E8 /* Lib */,
 				96E0EF9D1B45A707003607E8 /* City */,
 				96E0EF961B4592EA003607E8 /* Country */,
-				96E0EF861B456D7A003607E8 /* country_data.json */,
+				2195809E1B465E94007C399B /* country_data.json */,
 				96E0EF901B457F5D003607E8 /* Weather.h */,
 				96E0EF911B457F5D003607E8 /* Weather.m */,
-				96E0EF8D1B457E35003607E8 /* City.h */,
-				96E0EF8E1B457E35003607E8 /* City.m */,
 				96E0EF641B456D53003607E8 /* AppDelegate.h */,
 				96E0EF651B456D53003607E8 /* AppDelegate.m */,
 				96E0EF671B456D53003607E8 /* ViewController.h */,
 				96E0EF681B456D53003607E8 /* ViewController.m */,
 				96E0EF6A1B456D54003607E8 /* Main.storyboard */,
+				219580A31B469919007C399B /* WeatherCollectionViewCell.h */,
+				219580A41B469919007C399B /* WeatherCollectionViewCell.m */,
+				219580A01B46812A007C399B /* WeatherCollectionViewController.h */,
+				219580A11B46812A007C399B /* WeatherCollectionViewController.m */,
 				96E0EF6D1B456D54003607E8 /* Images.xcassets */,
 				96E0EF6F1B456D54003607E8 /* LaunchScreen.xib */,
 				96E0EF601B456D53003607E8 /* Supporting Files */,
@@ -168,6 +176,8 @@
 				96E0EF981B459BA6003607E8 /* CityListViewController.m */,
 				96E0EF9A1B45A701003607E8 /* CityCell.h */,
 				96E0EF9B1B45A701003607E8 /* CityCell.m */,
+				96E0EF8D1B457E35003607E8 /* City.h */,
+				96E0EF8E1B457E35003607E8 /* City.m */,
 			);
 			name = City;
 			sourceTree = "<group>";
@@ -263,7 +273,7 @@
 			files = (
 				96E0EF6C1B456D54003607E8 /* Main.storyboard in Resources */,
 				96E0EF711B456D54003607E8 /* LaunchScreen.xib in Resources */,
-				96E0EF871B456D7A003607E8 /* country_data.json in Resources */,
+				2195809F1B465E94007C399B /* country_data.json in Resources */,
 				96E0EF6E1B456D54003607E8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,11 +297,13 @@
 				96E0EFA11B463937003607E8 /* ImageCache.m in Sources */,
 				96E0EF8F1B457E35003607E8 /* City.m in Sources */,
 				96E0EF8C1B457A24003607E8 /* Country.m in Sources */,
+				219580A51B469919007C399B /* WeatherCollectionViewCell.m in Sources */,
 				96E0EF691B456D53003607E8 /* ViewController.m in Sources */,
 				96E0EF661B456D53003607E8 /* AppDelegate.m in Sources */,
 				96E0EF631B456D53003607E8 /* main.m in Sources */,
 				96E0EF951B4592E5003607E8 /* CountryCell.m in Sources */,
 				96E0EF991B459BA6003607E8 /* CityListViewController.m in Sources */,
+				219580A21B46812A007C399B /* WeatherCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +498,7 @@
 				96E0EF821B456D54003607E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96E0EF831B456D54003607E8 /* Build configuration list for PBXNativeTarget "HD-iOS-1Tests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +507,7 @@
 				96E0EF851B456D54003607E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
