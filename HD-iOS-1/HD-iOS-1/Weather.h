@@ -13,9 +13,9 @@
 @property (nonatomic, strong) NSString* timeString;
 @property (nonatomic, strong) NSString* iconURL;
 @property (nonatomic, strong) NSString* summary;
-@property (nonatomic) float tempCelsius;
-@property (nonatomic) float tempMaxCelcius;
-@property (nonatomic) float tempMinCelcius;
+@property (nonatomic, strong) NSString* tempCelsiusString;
+@property (nonatomic, strong) NSString* tempMaxCelciusString;
+@property (nonatomic, strong) NSString* tempMinCelciusString;
 
 -(id) initWithParameter:(NSDictionary *) weather;
 
