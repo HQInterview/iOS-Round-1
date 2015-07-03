@@ -22,7 +22,7 @@
     for (NSString* key in sortedKeys) {
         NSDictionary* weatherInfo = [weatherDict objectForKey:key];
         Weather* myWeather = [[Weather alloc] initWithParameter:weatherInfo];
-        if(myWeather.timeString != self.currentWeather.timeString) {
+        if(![myWeather.timeString isEqualToString:self.currentWeather.timeString]) {
             [self.weatherArray addObject:myWeather];
         }
     }
