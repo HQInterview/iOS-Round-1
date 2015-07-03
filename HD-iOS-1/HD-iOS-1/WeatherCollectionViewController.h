@@ -13,6 +13,7 @@
 
 @interface WeatherCollectionViewController : UIViewController  <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
 
 
 @property (nonatomic, strong)NSString* cityName;

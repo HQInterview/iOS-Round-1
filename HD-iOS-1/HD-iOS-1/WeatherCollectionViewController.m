@@ -26,7 +26,7 @@ static NSString * const reuseIdentifier = @"WeatherCell";
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    self.cityNameLabel.text = self.cityName;
     [self.collectionView setDataSource:self];
     [self.collectionView setDelegate:self];
 }
@@ -77,7 +77,7 @@ static NSString * const reuseIdentifier = @"WeatherCell";
     
     if (indexPath.row == 0){
         targetWeather = self.currentWeather;
-        cell.headerLabel.text = self.cityName;
+        cell.headerLabel.text = @"Today";
         
     } else {
         targetWeather = [self.weatherArray objectAtIndex:indexPath.row - 1];
@@ -93,9 +93,13 @@ static NSString * const reuseIdentifier = @"WeatherCell";
     if (image != nil) {
         cell.imageView.image = image;
     } else {
-        image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:targetWeather.iconURL]]];
-        [imgCache cacheImage:[NSURL URLWithString:targetWeather.iconURL] image:image];
-        cell.imageView.image = image;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),  ^{
+            UIImage* image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:targetWeather.iconURL]]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [imgCache cacheImage:[NSURL URLWithString:targetWeather.iconURL] image:image];
+                cell.imageView.image = image;
+            });
+        });
     }
     
     cell.bgView.backgroundColor = [self getColorFromWeather:targetWeather.summary];

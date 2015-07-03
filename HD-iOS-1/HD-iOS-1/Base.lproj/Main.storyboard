@@ -194,6 +194,9 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="156" y="36" width="89" height="37"/>
+                                            </variation>
                                         </label>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-7t-Ntu">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -247,12 +250,19 @@
                                                     </connections>
                                                 </tableViewCell>
                                             </prototypes>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="0.0" y="88" width="400" height="712"/>
+                                            </variation>
                                         </tableView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6X-pS-dxQ">
                                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="←">
                                                 <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="16" y="36" width="30" height="30"/>
+                                            </variation>
                                             <connections>
                                                 <segue destination="TnB-0B-mSf" kind="unwind" unwindAction="unwindToViewController:" id="IzF-H0-VWN"/>
                                             </connections>
@@ -565,12 +575,38 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="RDq-bg-K6M">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="62" y="28" width="276" height="21"/>
+                                </variation>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMO-zR-MlP">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="8Zs-dx-B0B"/>
+                                    <constraint firstAttribute="width" constant="53" id="rEk-pG-aLb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Zs-dx-B0B"/>
+                                        <exclude reference="rEk-pG-aLb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8Zs-dx-B0B"/>
+                                        <include reference="rEk-pG-aLb"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="TJq-0W-Yrk" kind="unwind" unwindAction="unwindToCityListViewController:" id="SBC-xC-bi2"/>
                                 </connections>
@@ -578,10 +614,18 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wM9-rp-Y23" secondAttribute="trailing" id="2uC-KH-fNY"/>
+                            <constraint firstAttribute="centerX" secondItem="RDq-bg-K6M" secondAttribute="centerX" id="4C1-GH-cx1"/>
                             <constraint firstItem="TOo-1B-OkT" firstAttribute="top" secondItem="wM9-rp-Y23" secondAttribute="bottom" id="Oty-EP-pA5"/>
-                            <constraint firstAttribute="trailing" secondItem="rMO-zR-MlP" secondAttribute="trailing" constant="16" id="VhJ-r6-9nU"/>
+                            <constraint firstItem="RDq-bg-K6M" firstAttribute="top" secondItem="the-rN-Lga" secondAttribute="bottom" constant="5" id="SjF-Nv-24g">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="rMO-zR-MlP" secondAttribute="trailing" constant="16" id="VhJ-r6-9nU">
+                                <variation key="heightClass=regular-widthClass=compact" constant="1"/>
+                            </constraint>
+                            <constraint firstItem="RDq-bg-K6M" firstAttribute="leading" secondItem="jCd-9D-moT" secondAttribute="leading" constant="62" id="Xza-Wu-bcI"/>
                             <constraint firstItem="rMO-zR-MlP" firstAttribute="top" secondItem="the-rN-Lga" secondAttribute="bottom" id="ath-lp-wyg"/>
                             <constraint firstItem="wM9-rp-Y23" firstAttribute="leading" secondItem="jCd-9D-moT" secondAttribute="leading" id="ct0-Om-ufE"/>
+                            <constraint firstAttribute="trailing" secondItem="RDq-bg-K6M" secondAttribute="trailing" constant="62" id="lKb-co-J2S"/>
                             <constraint firstItem="wM9-rp-Y23" firstAttribute="top" secondItem="the-rN-Lga" secondAttribute="bottom" id="m7Q-nW-tqq">
                                 <variation key="heightClass=regular-widthClass=compact" constant="34"/>
                             </constraint>
@@ -589,12 +633,17 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="wM9-rp-Y23"/>
+                                <exclude reference="RDq-bg-K6M"/>
                                 <exclude reference="rMO-zR-MlP"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2uC-KH-fNY"/>
                                 <exclude reference="ct0-Om-ufE"/>
                                 <exclude reference="m7Q-nW-tqq"/>
+                                <exclude reference="4C1-GH-cx1"/>
+                                <exclude reference="SjF-Nv-24g"/>
+                                <exclude reference="Xza-Wu-bcI"/>
+                                <exclude reference="lKb-co-J2S"/>
                                 <exclude reference="VhJ-r6-9nU"/>
                                 <exclude reference="ath-lp-wyg"/>
                                 <exclude reference="Oty-EP-pA5"/>
@@ -603,12 +652,17 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="wM9-rp-Y23"/>
+                                <include reference="RDq-bg-K6M"/>
                                 <include reference="rMO-zR-MlP"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2uC-KH-fNY"/>
                                 <include reference="ct0-Om-ufE"/>
                                 <include reference="m7Q-nW-tqq"/>
+                                <include reference="4C1-GH-cx1"/>
+                                <include reference="SjF-Nv-24g"/>
+                                <include reference="Xza-Wu-bcI"/>
+                                <include reference="lKb-co-J2S"/>
                                 <include reference="VhJ-r6-9nU"/>
                                 <include reference="ath-lp-wyg"/>
                                 <include reference="Oty-EP-pA5"/>
@@ -616,6 +670,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cityNameLabel" destination="RDq-bg-K6M" id="3gr-Hx-s1V"/>
                         <outlet property="collectionView" destination="wM9-rp-Y23" id="a17-Lv-KTg"/>
                     </connections>
                 </viewController>
