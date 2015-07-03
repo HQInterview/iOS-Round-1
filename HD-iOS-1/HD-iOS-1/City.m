@@ -14,7 +14,13 @@
 {
     self.cityName = city[@"city_name"];
     self.currentWeather = [[Weather alloc] initWithParameter:city[@"weather"][@"currently"]];
-    
+    self.weatherArray = [[NSMutableArray alloc] init];
+    id weatherDict = city[@"weather"][@"daily"];
+    for (NSString* key in weatherDict) {
+        NSDictionary* weatherInfo = [weatherDict objectForKey:key];
+        Weather* myWeather = [[Weather alloc] initWithParameter:weatherInfo];
+        [self.weatherArray addObject:myWeather];
+    }
     return self;
 }
 @end

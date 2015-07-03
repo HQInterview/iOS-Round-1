@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) NSString* cityName;
 @property (nonatomic, strong) Weather* currentWeather;
-//@property (nonatomic, strong) NSMutableArray* weatherArray;
+@property (nonatomic, strong) NSMutableArray* weatherArray;
 
 -(id) initWithParameter:(NSDictionary *) city;
 
