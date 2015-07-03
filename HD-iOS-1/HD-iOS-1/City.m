@@ -16,10 +16,15 @@
     self.currentWeather = [[Weather alloc] initWithParameter:city[@"weather"][@"currently"]];
     self.weatherArray = [[NSMutableArray alloc] init];
     id weatherDict = city[@"weather"][@"daily"];
-    for (NSString* key in weatherDict) {
+    
+    NSArray * sortedKeys = [[weatherDict allKeys] sortedArrayUsingSelector: @selector(caseInsensitiveCompare:)];
+    
+    for (NSString* key in sortedKeys) {
         NSDictionary* weatherInfo = [weatherDict objectForKey:key];
         Weather* myWeather = [[Weather alloc] initWithParameter:weatherInfo];
-        [self.weatherArray addObject:myWeather];
+        if(myWeather.timeString != self.currentWeather.timeString) {
+            [self.weatherArray addObject:myWeather];
+        }
     }
     return self;
 }
