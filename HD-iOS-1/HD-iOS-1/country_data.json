@@ -1,4 +1,4 @@
-[
+    "countries": [
       {
         "cities": [
           {
@@ -19436,4 +19436,4 @@
         "country_name": "Vietnam",
         "cover_image_url": "https://photos.hotelquickly.com/images/country/vietnam.jpg?1=1&ext=jpg&quality=70&w={width}&h={height}"
       }
-    ]
+    ],
