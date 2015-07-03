@@ -84,7 +84,8 @@ static NSString * const reuseIdentifier = @"WeatherCell";
         [imgCache cacheImage:[NSURL URLWithString:targetWeather.iconURL] image:image];
         cell.imageView.image = image;
     }
-    
+    cell.bgView.layer.cornerRadius = 5;
+    cell.bgView.layer.masksToBounds = YES;
     return cell;
 }
 
@@ -122,10 +123,10 @@ static NSString * const reuseIdentifier = @"WeatherCell";
 // MARK:- collection cell prefer size
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake([[UIScreen mainScreen] bounds].size.width/2 - 10,
+    return CGSizeMake([[UIScreen mainScreen] bounds].size.width/2 - 2,
                       [[UIScreen mainScreen] bounds].size.height/3);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 5.0;
+    return 0.0;
 }
 @end
