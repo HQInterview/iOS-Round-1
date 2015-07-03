@@ -55,9 +55,6 @@
     self.countriesArray = [[NSMutableArray alloc] init];
     for (NSDictionary* countryParam in countriesObject) {
         Country* country = [[Country alloc] initWithParameter:countryParam];
-        for(City *eachCity in country.citiesArray) {
-            NSLog(@"%f", eachCity.currentWeather.tempCelsius);
-        }
         [self.countriesArray addObject:country];
     }
 }
