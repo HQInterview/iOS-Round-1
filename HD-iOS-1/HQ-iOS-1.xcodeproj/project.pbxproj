@@ -44,7 +44,7 @@
 		219580A11B46812A007C399B /* WeatherCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewController.m; sourceTree = "<group>"; };
 		219580A31B469919007C399B /* WeatherCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCollectionViewCell.h; sourceTree = "<group>"; };
 		219580A41B469919007C399B /* WeatherCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewCell.m; sourceTree = "<group>"; };
-		96E0EF5D1B456D53003607E8 /* HD-iOS-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HD-iOS-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E0EF5D1B456D53003607E8 /* HQ-iOS-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HQ-iOS-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E0EF611B456D53003607E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E0EF621B456D53003607E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96E0EF641B456D53003607E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		96E0EF6B1B456D54003607E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96E0EF6D1B456D54003607E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96E0EF701B456D54003607E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		96E0EF761B456D54003607E8 /* HD-iOS-1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HD-iOS-1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E0EF761B456D54003607E8 /* HQ-iOS-1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HQ-iOS-1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E0EF7B1B456D54003607E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E0EF7C1B456D54003607E8 /* HD_iOS_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HD_iOS_1Tests.m; sourceTree = "<group>"; };
 		96E0EF8A1B457A24003607E8 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		96E0EF541B456D53003607E8 = {
 			isa = PBXGroup;
 			children = (
-				96E0EF5F1B456D53003607E8 /* HD-iOS-1 */,
+				96E0EF5F1B456D53003607E8 /* HQ-iOS-1 */,
 				96E0EF791B456D54003607E8 /* HD-iOS-1Tests */,
 				96E0EF5E1B456D53003607E8 /* Products */,
 			);
@@ -107,13 +107,13 @@
 		96E0EF5E1B456D53003607E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96E0EF5D1B456D53003607E8 /* HD-iOS-1.app */,
-				96E0EF761B456D54003607E8 /* HD-iOS-1Tests.xctest */,
+				96E0EF5D1B456D53003607E8 /* HQ-iOS-1.app */,
+				96E0EF761B456D54003607E8 /* HQ-iOS-1Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96E0EF5F1B456D53003607E8 /* HD-iOS-1 */ = {
+		96E0EF5F1B456D53003607E8 /* HQ-iOS-1 */ = {
 			isa = PBXGroup;
 			children = (
 				96E0EF9E1B4638F7003607E8 /* Lib */,
@@ -139,6 +139,7 @@
 				96E0EF6F1B456D54003607E8 /* LaunchScreen.xib */,
 				96E0EF601B456D53003607E8 /* Supporting Files */,
 			);
+			name = "HQ-iOS-1";
 			path = "HD-iOS-1";
 			sourceTree = "<group>";
 		};
@@ -204,9 +205,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96E0EF5C1B456D53003607E8 /* HD-iOS-1 */ = {
+		96E0EF5C1B456D53003607E8 /* HQ-iOS-1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96E0EF801B456D54003607E8 /* Build configuration list for PBXNativeTarget "HD-iOS-1" */;
+			buildConfigurationList = 96E0EF801B456D54003607E8 /* Build configuration list for PBXNativeTarget "HQ-iOS-1" */;
 			buildPhases = (
 				96E0EF591B456D53003607E8 /* Sources */,
 				96E0EF5A1B456D53003607E8 /* Frameworks */,
@@ -216,14 +217,14 @@
 			);
 			dependencies = (
 			);
-			name = "HD-iOS-1";
+			name = "HQ-iOS-1";
 			productName = "HD-iOS-1";
-			productReference = 96E0EF5D1B456D53003607E8 /* HD-iOS-1.app */;
+			productReference = 96E0EF5D1B456D53003607E8 /* HQ-iOS-1.app */;
 			productType = "com.apple.product-type.application";
 		};
-		96E0EF751B456D54003607E8 /* HD-iOS-1Tests */ = {
+		96E0EF751B456D54003607E8 /* HQ-iOS-1Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96E0EF831B456D54003607E8 /* Build configuration list for PBXNativeTarget "HD-iOS-1Tests" */;
+			buildConfigurationList = 96E0EF831B456D54003607E8 /* Build configuration list for PBXNativeTarget "HQ-iOS-1Tests" */;
 			buildPhases = (
 				96E0EF721B456D54003607E8 /* Sources */,
 				96E0EF731B456D54003607E8 /* Frameworks */,
@@ -234,9 +235,9 @@
 			dependencies = (
 				96E0EF781B456D54003607E8 /* PBXTargetDependency */,
 			);
-			name = "HD-iOS-1Tests";
+			name = "HQ-iOS-1Tests";
 			productName = "HD-iOS-1Tests";
-			productReference = 96E0EF761B456D54003607E8 /* HD-iOS-1Tests.xctest */;
+			productReference = 96E0EF761B456D54003607E8 /* HQ-iOS-1Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -257,7 +258,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 96E0EF581B456D53003607E8 /* Build configuration list for PBXProject "HD-iOS-1" */;
+			buildConfigurationList = 96E0EF581B456D53003607E8 /* Build configuration list for PBXProject "HQ-iOS-1" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -270,8 +271,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96E0EF5C1B456D53003607E8 /* HD-iOS-1 */,
-				96E0EF751B456D54003607E8 /* HD-iOS-1Tests */,
+				96E0EF5C1B456D53003607E8 /* HQ-iOS-1 */,
+				96E0EF751B456D54003607E8 /* HQ-iOS-1Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -332,7 +333,7 @@
 /* Begin PBXTargetDependency section */
 		96E0EF781B456D54003607E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 96E0EF5C1B456D53003607E8 /* HD-iOS-1 */;
+			target = 96E0EF5C1B456D53003607E8 /* HQ-iOS-1 */;
 			targetProxy = 96E0EF771B456D54003607E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -443,7 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HD-iOS-1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "HQ-iOS-1";
 			};
 			name = Debug;
 		};
@@ -453,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HD-iOS-1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "HQ-iOS-1";
 			};
 			name = Release;
 		};
@@ -471,7 +472,7 @@
 				);
 				INFOPLIST_FILE = "HD-iOS-1Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "HQ-iOS-1Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HD-iOS-1.app/HD-iOS-1";
 			};
 			name = Debug;
@@ -486,7 +487,7 @@
 				);
 				INFOPLIST_FILE = "HD-iOS-1Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "HQ-iOS-1Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HD-iOS-1.app/HD-iOS-1";
 			};
 			name = Release;
@@ -494,7 +495,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96E0EF581B456D53003607E8 /* Build configuration list for PBXProject "HD-iOS-1" */ = {
+		96E0EF581B456D53003607E8 /* Build configuration list for PBXProject "HQ-iOS-1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E0EF7E1B456D54003607E8 /* Debug */,
@@ -503,7 +504,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96E0EF801B456D54003607E8 /* Build configuration list for PBXNativeTarget "HD-iOS-1" */ = {
+		96E0EF801B456D54003607E8 /* Build configuration list for PBXNativeTarget "HQ-iOS-1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E0EF811B456D54003607E8 /* Debug */,
@@ -512,7 +513,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96E0EF831B456D54003607E8 /* Build configuration list for PBXNativeTarget "HD-iOS-1Tests" */ = {
+		96E0EF831B456D54003607E8 /* Build configuration list for PBXNativeTarget "HQ-iOS-1Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E0EF841B456D54003607E8 /* Debug */,
