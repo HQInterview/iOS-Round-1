@@ -473,7 +473,7 @@
 				INFOPLIST_FILE = "HD-iOS-1Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "HQ-iOS-1Tests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HD-iOS-1.app/HD-iOS-1";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HQ-iOS-1.app/HQ-iOS-1";
 			};
 			name = Debug;
 		};
@@ -488,7 +488,7 @@
 				INFOPLIST_FILE = "HD-iOS-1Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "HQ-iOS-1Tests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HD-iOS-1.app/HD-iOS-1";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HQ-iOS-1.app/HQ-iOS-1";
 			};
 			name = Release;
 		};

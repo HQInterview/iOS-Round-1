@@ -50,7 +50,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thailand" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyI-1w-apw">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                         <rect key="frame" x="63" y="9" width="243" height="21"/>
@@ -122,13 +122,13 @@
                                 <exclude reference="S9f-Jl-91c"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="TNs-hO-Bdg"/>
                                 <exclude reference="20P-lF-5gj"/>
                                 <exclude reference="Li7-Bw-gZV"/>
                                 <exclude reference="eyi-th-RGf"/>
                                 <exclude reference="Wew-Xr-sSd"/>
                                 <exclude reference="xjC-Km-JPm"/>
                                 <exclude reference="xw1-Zy-TLl"/>
-                                <exclude reference="TNs-hO-Bdg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -137,13 +137,13 @@
                                 <include reference="S9f-Jl-91c"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="TNs-hO-Bdg"/>
                                 <include reference="20P-lF-5gj"/>
                                 <include reference="Li7-Bw-gZV"/>
                                 <include reference="eyi-th-RGf"/>
                                 <include reference="Wew-Xr-sSd"/>
                                 <include reference="xjC-Km-JPm"/>
                                 <include reference="xw1-Zy-TLl"/>
-                                <include reference="TNs-hO-Bdg"/>
                             </mask>
                         </variation>
                     </view>
@@ -181,9 +181,6 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="156" y="36" width="89" height="40"/>
-                                            </variation>
                                         </label>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-7t-Ntu">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -237,9 +234,6 @@
                                                     </connections>
                                                 </tableViewCell>
                                             </prototypes>
-                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="0.0" y="91" width="400" height="709"/>
-                                            </variation>
                                         </tableView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6X-pS-dxQ">
                                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -247,9 +241,6 @@
                                             <state key="normal" title="←">
                                                 <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
-                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="16" y="39" width="30" height="33"/>
-                                            </variation>
                                             <connections>
                                                 <segue destination="TnB-0B-mSf" kind="unwind" unwindAction="unwindToViewController:" id="IzF-H0-VWN"/>
                                             </connections>
