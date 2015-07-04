@@ -78,14 +78,15 @@ static NSString * const reuseIdentifier = @"WeatherCell";
     if (indexPath.row == 0){
         targetWeather = self.currentWeather;
         cell.headerLabel.text = @"Today";
+        cell.temperature.text = targetWeather.tempCelsiusString;
         
     } else {
         targetWeather = [self.weatherArray objectAtIndex:indexPath.row - 1];
         cell.headerLabel.text = targetWeather.timeString;
+        cell.temperature.hidden = YES;
     }
     
     cell.summaryLabel.text  = targetWeather.summary;
-    cell.temperature.text = targetWeather.tempCelsiusString;
     cell.tempMaxMin.text = [NSString stringWithFormat:@"%@/%@", targetWeather.tempMaxCelciusString, targetWeather.tempMinCelciusString];
     
     ImageCache* imgCache = [ImageCache sharedInstance];
