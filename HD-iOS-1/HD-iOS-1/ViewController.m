@@ -59,6 +59,7 @@
     }
 }
 
+// MARK :- Datasource & Delegate UITableview
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.countriesArray count];
@@ -121,6 +122,7 @@
         vc.citiesArray = [countryObj.citiesArray copy];
     }
 }
+
 -(void) backdroundLoadImage:(NSURL *)imgURL
 {
     UIImage* image = [self.myImageCache loadImage:imgURL];
@@ -134,4 +136,12 @@
         });
     }
 }
+
+- (UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier {
+    // Instantiate a new CustomUnwindSegue
+    RightCustomSegueUnwind *segue = [[RightCustomSegueUnwind alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
+    
+    return segue;
+}
+
 @end

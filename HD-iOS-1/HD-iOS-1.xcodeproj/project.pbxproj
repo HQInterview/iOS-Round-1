@@ -24,6 +24,8 @@
 		96E0EF991B459BA6003607E8 /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EF981B459BA6003607E8 /* CityListViewController.m */; };
 		96E0EF9C1B45A701003607E8 /* CityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EF9B1B45A701003607E8 /* CityCell.m */; };
 		96E0EFA11B463937003607E8 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EFA01B463937003607E8 /* ImageCache.m */; };
+		96E0EFA41B4708BC003607E8 /* RightCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EFA31B4708BC003607E8 /* RightCustomSegue.m */; };
+		96E0EFA71B470CCC003607E8 /* RightCustomSegueUnwind.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E0EFA61B470CCC003607E8 /* RightCustomSegueUnwind.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		96E0EF9B1B45A701003607E8 /* CityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCell.m; sourceTree = "<group>"; };
 		96E0EF9F1B463937003607E8 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
 		96E0EFA01B463937003607E8 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		96E0EFA21B4708BC003607E8 /* RightCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCustomSegue.h; sourceTree = "<group>"; };
+		96E0EFA31B4708BC003607E8 /* RightCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCustomSegue.m; sourceTree = "<group>"; };
+		96E0EFA51B470CCC003607E8 /* RightCustomSegueUnwind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCustomSegueUnwind.h; sourceTree = "<group>"; };
+		96E0EFA61B470CCC003607E8 /* RightCustomSegueUnwind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCustomSegueUnwind.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,10 @@
 				96E0EF681B456D53003607E8 /* ViewController.m */,
 				96E0EF6A1B456D54003607E8 /* Main.storyboard */,
 				219580A31B469919007C399B /* WeatherCollectionViewCell.h */,
+				96E0EFA21B4708BC003607E8 /* RightCustomSegue.h */,
+				96E0EFA31B4708BC003607E8 /* RightCustomSegue.m */,
+				96E0EFA51B470CCC003607E8 /* RightCustomSegueUnwind.h */,
+				96E0EFA61B470CCC003607E8 /* RightCustomSegueUnwind.m */,
 				219580A41B469919007C399B /* WeatherCollectionViewCell.m */,
 				219580A01B46812A007C399B /* WeatherCollectionViewController.h */,
 				219580A11B46812A007C399B /* WeatherCollectionViewController.m */,
@@ -292,10 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E0EFA71B470CCC003607E8 /* RightCustomSegueUnwind.m in Sources */,
 				96E0EF921B457F5D003607E8 /* Weather.m in Sources */,
 				96E0EF9C1B45A701003607E8 /* CityCell.m in Sources */,
 				96E0EFA11B463937003607E8 /* ImageCache.m in Sources */,
 				96E0EF8F1B457E35003607E8 /* City.m in Sources */,
+				96E0EFA41B4708BC003607E8 /* RightCustomSegue.m in Sources */,
 				96E0EF8C1B457A24003607E8 /* Country.m in Sources */,
 				219580A51B469919007C399B /* WeatherCollectionViewCell.m in Sources */,
 				96E0EF691B456D53003607E8 /* ViewController.m in Sources */,

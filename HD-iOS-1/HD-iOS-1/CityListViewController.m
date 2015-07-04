@@ -92,4 +92,12 @@
         vc.weatherArray = [targetCity.weatherArray copy];
     }
 }
+
+- (UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier {
+    // Instantiate a new CustomUnwindSegue
+    RightCustomSegueUnwind *segue = [[RightCustomSegueUnwind alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
+    
+    return segue;
+}
+
 @end

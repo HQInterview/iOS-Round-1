@@ -12,6 +12,7 @@
 #import "ImageCache.h"
 #import "Weather.h"
 #import "WeatherCollectionViewController.h"
+#import "RightCustomSegueUnwind.h"
 
 @interface CityListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;

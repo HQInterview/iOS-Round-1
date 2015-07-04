@@ -10,4 +10,6 @@
 
 @interface RightCustomSegue : UIStoryboardSegue
 
+@property CGPoint originatingPoint;
+
 @end
