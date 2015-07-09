@@ -1,0 +1,1 @@
+PODS_IOS_ROUND___MANTLE_OTHER_LDFLAGS = -framework "Foundation"

@@ -1,0 +1,1 @@
+PODS_IOS_ROUND___SDWEBIMAGE_OTHER_LDFLAGS = -framework "ImageIO"
