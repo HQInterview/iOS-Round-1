@@ -1,0 +1,8 @@
+platform :ios, '7.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'iOS-Round-1' do
+  pod 'SDWebImage', '~> 3.7'
+  pod 'Mantle', '~> 2.0'
+end

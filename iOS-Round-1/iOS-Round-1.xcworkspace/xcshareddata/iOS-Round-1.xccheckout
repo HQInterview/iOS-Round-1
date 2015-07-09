@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3DFB68BE-D9EF-4727-963D-7E46981332F7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOS-Round-1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B13819130EB122AE41584E169520C34CAB39800B</key>
+		<string>https://github.com/HQInterview/iOS-Round-1.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS-Round-1/iOS-Round-1.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B13819130EB122AE41584E169520C34CAB39800B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/HQInterview/iOS-Round-1.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B13819130EB122AE41584E169520C34CAB39800B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B13819130EB122AE41584E169520C34CAB39800B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-Round-1</string>
+		</dict>
+	</array>
+</dict>
+</plist>
