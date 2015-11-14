@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CD3474EB6FC3F48B5437582B6191F370295D3DA9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CD3474EB6FC3F48B5437582B6191F370295D3DA9" : 0,
+    "B13819130EB122AE41584E169520C34CAB39800B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F7705599-F9FD-43A8-ADAA-03EC2052C698",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CD3474EB6FC3F48B5437582B6191F370295D3DA9" : "HQTest\/",
+    "B13819130EB122AE41584E169520C34CAB39800B" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HQ",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HQ.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/augurniko\/iOS-Round-1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B13819130EB122AE41584E169520C34CAB39800B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/augurniko\/HQ2",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CD3474EB6FC3F48B5437582B6191F370295D3DA9"
+    }
+  ]
+}
