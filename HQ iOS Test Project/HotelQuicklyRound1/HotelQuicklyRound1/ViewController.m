@@ -40,6 +40,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CountryCellID"];
     
     cell.textLabel.text = country.country_name;
+    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:country.flag_image_url]]];
     return cell;
 }
 
@@ -48,6 +49,10 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self performSegueWithIdentifier:@"ToCitiesVC" sender:nil];
     });
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
 }
 
 #pragma mark - country info

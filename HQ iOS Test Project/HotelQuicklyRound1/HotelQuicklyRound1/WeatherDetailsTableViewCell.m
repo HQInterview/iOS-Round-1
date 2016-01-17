@@ -14,6 +14,9 @@
     
     self.icon.contentMode = UIViewContentModeScaleAspectFit;
     
+    self.backgroundColor = [UIColor colorWithRed:0.70 green:0.70 blue:0.70 alpha:1];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     [self.maxTemp sizeToFit];
     [self.minTemp sizeToFit];
     [self.summary sizeToFit];

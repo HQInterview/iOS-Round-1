@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSMutableArray *weatherForecastMutableArray;
 @property (strong, nonatomic) NSDictionary *city_daily_weather;
 @property (weak, nonatomic) IBOutlet UITableView *weatherForecastTableView;
+@property (weak, nonatomic) IBOutlet UILabel *temperatureStatement;
 
 @end
 
@@ -25,6 +26,12 @@
     self.weatherForecastMutableArray = [NSMutableArray new];
     [self retrieveWeatherForecastForSelectedCity];
     
+    self.temperatureStatement.text = @"All temperature are displayed in Celcius";
+    self.temperatureStatement.font = [UIFont systemFontOfSize:12];
+    
+    self.weatherForecastTableView.backgroundColor = [UIColor colorWithRed:0.70 green:0.70 blue:0.70 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:0.70 green:0.70 blue:0.70 alpha:1];
+    self.temperatureStatement.backgroundColor = [UIColor colorWithRed:0.70 green:0.70 blue:0.70 alpha:1];
 }
 
 -(NSDateFormatter*)modifyDateFormatter {
@@ -65,12 +72,17 @@
     Weather *weather = [self.weatherForecastMutableArray objectAtIndex:indexPath.row];
     
     WeatherDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WeatherForecastCellID"];
-    cell.icon.image = [UIImage imageNamed:@"test"];
+    cell.icon.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:weather.iconUrl]]];
     cell.summary.text = [NSString stringWithFormat:@"Summary: %@",weather.summary];
     cell.maxTemp.text = [NSString stringWithFormat:@"Max: %@", weather.max_temp];
     cell.minTemp.text = [NSString stringWithFormat:@"Min: %@", weather.min_temp];
-    cell.dateString.text = weather.timeString;
     
+    if (indexPath.row == 0) {
+        cell.dateString.text = [NSString stringWithFormat:@"%@ (Currently)", weather.timeString];
+    } else {
+        cell.dateString.text = weather.timeString;
+    }
+
     return cell;
     
 }

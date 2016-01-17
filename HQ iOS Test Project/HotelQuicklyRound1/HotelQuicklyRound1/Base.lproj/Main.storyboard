@@ -21,12 +21,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCellID" id="Lv3-9t-WAj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCellID" textLabel="Tlp-29-PL2" style="IBUITableViewCellStyleDefault" id="Lv3-9t-WAj">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lv3-9t-WAj" id="qZi-A9-ub6">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tlp-29-PL2">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -115,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q2o-Q5-ES5">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="570"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherForecastCellID" rowHeight="150" id="b0N-fg-PWT" customClass="WeatherDetailsTableViewCell">
@@ -199,16 +208,26 @@
                                     <outlet property="delegate" destination="R3e-Or-yw6" id="02e-o2-Bnf"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2K-MN-nVf">
+                                <rect key="frame" x="20" y="577" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lDz-NJ-ZaR" firstAttribute="top" secondItem="q2o-Q5-ES5" secondAttribute="bottom" id="Cgo-IW-gB3"/>
                             <constraint firstItem="q2o-Q5-ES5" firstAttribute="top" secondItem="Jjl-Ui-7mb" secondAttribute="top" id="Ph4-et-jyu"/>
+                            <constraint firstAttribute="trailing" secondItem="N2K-MN-nVf" secondAttribute="trailing" constant="20" id="Pxx-KJ-nyK"/>
                             <constraint firstAttribute="trailing" secondItem="q2o-Q5-ES5" secondAttribute="trailing" id="eLp-H8-BwW"/>
+                            <constraint firstItem="lDz-NJ-ZaR" firstAttribute="top" secondItem="N2K-MN-nVf" secondAttribute="bottom" constant="3" id="frh-L1-iAj"/>
                             <constraint firstItem="q2o-Q5-ES5" firstAttribute="leading" secondItem="Jjl-Ui-7mb" secondAttribute="leading" id="gxv-vz-zQt"/>
+                            <constraint firstItem="N2K-MN-nVf" firstAttribute="top" secondItem="q2o-Q5-ES5" secondAttribute="bottom" constant="6" id="t2N-nu-tre"/>
+                            <constraint firstItem="N2K-MN-nVf" firstAttribute="leading" secondItem="Jjl-Ui-7mb" secondAttribute="leading" constant="20" id="uJa-6t-Al3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="temperatureStatement" destination="N2K-MN-nVf" id="OFY-I5-aDV"/>
                         <outlet property="weatherForecastTableView" destination="q2o-Q5-ES5" id="FDu-pe-LBu"/>
                     </connections>
                 </viewController>
