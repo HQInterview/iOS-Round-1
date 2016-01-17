@@ -26,6 +26,9 @@
     self.title = @"Countries";
     self.animatedMutableArray = [NSMutableArray new];
     self.countriesMutableArray = [NSMutableArray new];
+    
+    self.countryTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     [self retrieveCountryInfoFromCountryDataJSON];
     
 }

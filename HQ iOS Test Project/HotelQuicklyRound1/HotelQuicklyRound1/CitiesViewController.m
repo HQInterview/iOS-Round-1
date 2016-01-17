@@ -25,6 +25,9 @@
     self.title = self.country.country_name;
     self.fadedInMutableArray = [NSMutableArray new];
     self.cityMutableArray = [NSMutableArray new];
+    
+    self.citiesTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     [self retrieveCityInfoFromSelectedCountry];
 
 }
