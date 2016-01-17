@@ -8,9 +8,11 @@
 
 #import "CitiesViewController.h"
 #import "DetailsViewController.h"
+#import "City.h"
 
 @interface CitiesViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *citiesTableView;
+@property (strong, nonatomic) NSMutableArray *cityMutableArray;
 
 @end
 
@@ -18,19 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.title = self.country.country_name;
+    self.cityMutableArray = [NSMutableArray new];
+    [self retrieveCityInfoFromSelectedCountry];
+
 }
 
 #pragma mark - table
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 2;
+    return self.cityMutableArray.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    City *city = [self.cityMutableArray objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CitiesCellID"];
-    cell.textLabel.text = @"bye";
+    cell.textLabel.text = city.city_name;
     return cell;
 }
 
@@ -40,6 +47,21 @@
         [self performSegueWithIdentifier:@"ToDetailsVC" sender:nil];
     });
     
+}
+
+
+#pragma mark - city info
+-(void)retrieveCityInfoFromSelectedCountry {
+    
+    for (NSDictionary *cityInSelectedCountry in self.country.cities) {
+        
+        City *city = [City new];
+        city.city_name = [cityInSelectedCountry valueForKeyPath:@"city_name"];
+        
+        if (![city.city_name isEqualToString:@"NULL"]) {
+            [self.cityMutableArray addObject:city];
+        }
+    }
 }
 
 #pragma mark - segue

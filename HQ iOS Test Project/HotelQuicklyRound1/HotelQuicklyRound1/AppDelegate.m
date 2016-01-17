@@ -18,15 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"country_data" ofType:@"json"];
-    NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    NSData *jsonData = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
-                                      
-    NSError *jsonError;
-    NSMutableDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&jsonError];
-
-    
-    
     return YES;
 }
 

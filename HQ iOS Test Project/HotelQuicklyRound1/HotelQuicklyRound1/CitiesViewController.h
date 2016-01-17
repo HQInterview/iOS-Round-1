@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Country.h"
 
 @interface CitiesViewController : UIViewController
+@property (strong, nonatomic) Country *country;
+
 
 @end
