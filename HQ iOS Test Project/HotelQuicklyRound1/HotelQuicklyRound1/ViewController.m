@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CitiesViewController.h"
 #import "Country.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *countryTableView;
@@ -40,7 +41,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CountryCellID"];
     
     cell.textLabel.text = country.country_name;
-    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:country.flag_image_url]]];
+    
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:country.flag_image_url] placeholderImage:[UIImage imageNamed:@"test"]];
+    
     return cell;
 }
 
