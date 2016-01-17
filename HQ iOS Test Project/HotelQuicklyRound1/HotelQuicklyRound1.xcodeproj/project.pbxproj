@@ -19,6 +19,7 @@
 		695D97711C4B7EE000D242F8 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D97701C4B7EE000D242F8 /* Country.m */; };
 		695D97751C4B7FB600D242F8 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D97741C4B7FB600D242F8 /* City.m */; };
 		695D97781C4B7FE700D242F8 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D97771C4B7FE700D242F8 /* Weather.m */; };
+		695D977B1C4BA56200D242F8 /* WeatherDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D977A1C4BA56200D242F8 /* WeatherDetailsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		695D97741C4B7FB600D242F8 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		695D97761C4B7FE700D242F8 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		695D97771C4B7FE700D242F8 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		695D97791C4BA56200D242F8 /* WeatherDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherDetailsTableViewCell.h; sourceTree = "<group>"; };
+		695D977A1C4BA56200D242F8 /* WeatherDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherDetailsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 			children = (
 				695D97501C4B48E500D242F8 /* AppDelegate.h */,
 				695D97511C4B48E500D242F8 /* AppDelegate.m */,
+				695D97791C4BA56200D242F8 /* WeatherDetailsTableViewCell.h */,
+				695D977A1C4BA56200D242F8 /* WeatherDetailsTableViewCell.m */,
 				695D97721C4B7EEA00D242F8 /* Model */,
 				695D976E1C4B7EC900D242F8 /* View Controllers */,
 				695D97561C4B48E500D242F8 /* Main.storyboard */,
@@ -196,6 +201,7 @@
 			files = (
 				695D97551C4B48E500D242F8 /* ViewController.m in Sources */,
 				695D976D1C4B7AE500D242F8 /* DetailsViewController.m in Sources */,
+				695D977B1C4BA56200D242F8 /* WeatherDetailsTableViewCell.m in Sources */,
 				695D976A1C4B783300D242F8 /* CitiesViewController.m in Sources */,
 				695D97521C4B48E500D242F8 /* AppDelegate.m in Sources */,
 				695D97781C4B7FE700D242F8 /* Weather.m in Sources */,

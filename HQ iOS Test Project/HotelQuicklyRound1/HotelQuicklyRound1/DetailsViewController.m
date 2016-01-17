@@ -8,6 +8,7 @@
 
 #import "DetailsViewController.h"
 #import "Weather.h"
+#import "WeatherDetailsTableViewCell.h"
 
 @interface DetailsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSMutableArray *weatherForecastMutableArray;
@@ -63,14 +64,19 @@
     
     Weather *weather = [self.weatherForecastMutableArray objectAtIndex:indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WeatherForecastCellID"];
-    cell.textLabel.text = weather.summary;
+    WeatherDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WeatherForecastCellID"];
+    cell.icon.image = [UIImage imageNamed:@"test"];
+    cell.summary.text = [NSString stringWithFormat:@"Summary: %@",weather.summary];
+    cell.maxTemp.text = [NSString stringWithFormat:@"Max: %@", weather.max_temp];
+    cell.minTemp.text = [NSString stringWithFormat:@"Min: %@", weather.min_temp];
+    cell.dateString.text = weather.timeString;
+    
     return cell;
     
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return 150;
 }
 
 #pragma mark - retrieve weather forecast
@@ -90,6 +96,8 @@
         [self createDateTimeFormatter:weather.timeString forWeather:weather];
         
         [self.weatherForecastMutableArray addObject:weather];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeString" ascending:TRUE];
+        [self.weatherForecastMutableArray sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     }
 }
 
