@@ -16,6 +16,9 @@
 		695D97671C4B64C900D242F8 /* country_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 695D97661C4B64C900D242F8 /* country_data.json */; };
 		695D976A1C4B783300D242F8 /* CitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D97691C4B783300D242F8 /* CitiesViewController.m */; };
 		695D976D1C4B7AE500D242F8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D976C1C4B7AE500D242F8 /* DetailsViewController.m */; };
+		695D97711C4B7EE000D242F8 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D97701C4B7EE000D242F8 /* Country.m */; };
+		695D97751C4B7FB600D242F8 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D97741C4B7FB600D242F8 /* City.m */; };
+		695D97781C4B7FE700D242F8 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D97771C4B7FE700D242F8 /* Weather.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,12 @@
 		695D97691C4B783300D242F8 /* CitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesViewController.m; sourceTree = "<group>"; };
 		695D976B1C4B7AE500D242F8 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		695D976C1C4B7AE500D242F8 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		695D976F1C4B7EE000D242F8 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
+		695D97701C4B7EE000D242F8 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		695D97731C4B7FB600D242F8 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		695D97741C4B7FB600D242F8 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		695D97761C4B7FE700D242F8 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		695D97771C4B7FE700D242F8 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +77,9 @@
 			children = (
 				695D97501C4B48E500D242F8 /* AppDelegate.h */,
 				695D97511C4B48E500D242F8 /* AppDelegate.m */,
-				695D97531C4B48E500D242F8 /* ViewController.h */,
-				695D97541C4B48E500D242F8 /* ViewController.m */,
+				695D97721C4B7EEA00D242F8 /* Model */,
+				695D976E1C4B7EC900D242F8 /* View Controllers */,
 				695D97561C4B48E500D242F8 /* Main.storyboard */,
-				695D97681C4B783300D242F8 /* CitiesViewController.h */,
-				695D97691C4B783300D242F8 /* CitiesViewController.m */,
-				695D976B1C4B7AE500D242F8 /* DetailsViewController.h */,
-				695D976C1C4B7AE500D242F8 /* DetailsViewController.m */,
 				695D97591C4B48E500D242F8 /* Assets.xcassets */,
 				695D975B1C4B48E500D242F8 /* LaunchScreen.storyboard */,
 				695D975E1C4B48E500D242F8 /* Info.plist */,
@@ -90,6 +95,32 @@
 				695D974E1C4B48E500D242F8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		695D976E1C4B7EC900D242F8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				695D97531C4B48E500D242F8 /* ViewController.h */,
+				695D97541C4B48E500D242F8 /* ViewController.m */,
+				695D97681C4B783300D242F8 /* CitiesViewController.h */,
+				695D97691C4B783300D242F8 /* CitiesViewController.m */,
+				695D976B1C4B7AE500D242F8 /* DetailsViewController.h */,
+				695D976C1C4B7AE500D242F8 /* DetailsViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		695D97721C4B7EEA00D242F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				695D976F1C4B7EE000D242F8 /* Country.h */,
+				695D97701C4B7EE000D242F8 /* Country.m */,
+				695D97731C4B7FB600D242F8 /* City.h */,
+				695D97741C4B7FB600D242F8 /* City.m */,
+				695D97761C4B7FE700D242F8 /* Weather.h */,
+				695D97771C4B7FE700D242F8 /* Weather.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +198,9 @@
 				695D976D1C4B7AE500D242F8 /* DetailsViewController.m in Sources */,
 				695D976A1C4B783300D242F8 /* CitiesViewController.m in Sources */,
 				695D97521C4B48E500D242F8 /* AppDelegate.m in Sources */,
+				695D97781C4B7FE700D242F8 /* Weather.m in Sources */,
+				695D97711C4B7EE000D242F8 /* Country.m in Sources */,
+				695D97751C4B7FB600D242F8 /* City.m in Sources */,
 				695D974F1C4B48E500D242F8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

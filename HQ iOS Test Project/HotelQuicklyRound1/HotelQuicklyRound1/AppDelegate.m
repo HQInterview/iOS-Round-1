@@ -20,15 +20,12 @@
 
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"country_data" ofType:@"json"];
     NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    
     NSData *jsonData = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
                                       
     NSError *jsonError;
     NSMutableDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&jsonError];
-    NSArray *countries = [jsonDict valueForKey:@"countries"];
 
     
-    NSLog(@"jsonDict %@", countries);
     
     return YES;
 }
