@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Weather.h"
 
 @interface City : NSObject
 @property (strong, nonatomic) NSString *city_name;
-@property (strong, nonatomic) Weather *weather;
+@property (strong, nonatomic) NSDictionary *city_daily_weather;
 
 @end

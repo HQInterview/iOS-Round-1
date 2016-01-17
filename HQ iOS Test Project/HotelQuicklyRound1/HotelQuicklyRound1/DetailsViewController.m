@@ -7,8 +7,12 @@
 //
 
 #import "DetailsViewController.h"
+#import "Weather.h"
 
-@interface DetailsViewController ()
+@interface DetailsViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) NSMutableArray *weatherForecastMutableArray;
+@property (strong, nonatomic) NSDictionary *city_daily_weather;
+@property (weak, nonatomic) IBOutlet UITableView *weatherForecastTableView;
 
 @end
 
@@ -16,22 +20,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.weatherForecastMutableArray = [NSMutableArray new];
+    [self retrieveWeatherForecastForSelectedCity];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - table
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return self.weatherForecastMutableArray.count;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Weather *weather = [self.weatherForecastMutableArray objectAtIndex:indexPath.row];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WeatherForecastCellID"];
+    cell.textLabel.text = weather.summary;
+    return cell;
+    
 }
-*/
+
+#pragma mark - retrieve weather forecast
+-(void)retrieveWeatherForecastForSelectedCity {
+    
+    NSArray *weatherDetails = [self.city.city_daily_weather allValues];
+    
+    for (NSDictionary *weatherForecast in weatherDetails) {
+        
+        Weather *weather = [Weather new];
+        weather.max_temp = [weatherForecast valueForKeyPath:@"tempMaxCelcius"];
+        weather.min_temp = [weatherForecast valueForKeyPath:@"tempMinCelcius"];
+        weather.iconUrl = [weatherForecast objectForKey:@"iconUrl"];
+        weather.summary = [weatherForecast valueForKeyPath:@"summary"];
+        weather.timeString = [weatherForecast valueForKeyPath:@"timeString"];
+        
+        [self.weatherForecastMutableArray addObject:weather];
+    }
+}
+
 
 @end

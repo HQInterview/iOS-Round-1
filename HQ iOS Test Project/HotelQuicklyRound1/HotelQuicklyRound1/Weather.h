@@ -11,8 +11,9 @@
 @interface Weather : NSObject
 
 @property (strong, nonatomic) NSString *iconUrl;
-@property float max_temp;
-@property float min_temp;
+@property (strong, nonatomic) NSString *max_temp;
+@property (strong, nonatomic) NSString *min_temp;
 @property (strong, nonatomic) NSString *summary;
+@property (strong, nonatomic) NSString *timeString;
 
 @end

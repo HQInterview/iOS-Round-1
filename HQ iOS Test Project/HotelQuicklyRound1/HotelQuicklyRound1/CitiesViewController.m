@@ -46,7 +46,6 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self performSegueWithIdentifier:@"ToDetailsVC" sender:nil];
     });
-    
 }
 
 
@@ -58,10 +57,14 @@
         City *city = [City new];
         city.city_name = [cityInSelectedCountry valueForKeyPath:@"city_name"];
         
+        city.city_daily_weather = [cityInSelectedCountry valueForKeyPath:@"weather.daily"];
+        
         if (![city.city_name isEqualToString:@"NULL"]) {
             [self.cityMutableArray addObject:city];
         }
     }
+
+    
 }
 
 #pragma mark - segue
@@ -69,9 +72,11 @@
     
     if ([segue.identifier isEqualToString:@"ToDetailsVC"]) {
         
+        NSIndexPath *indexPath = [self.citiesTableView indexPathForSelectedRow];
+        City *selectedCity = [self.cityMutableArray objectAtIndex:indexPath.row];
+        
         DetailsViewController *dvc = segue.destinationViewController;
-        
-        
+        dvc.city = selectedCity;
     }
 }
 
