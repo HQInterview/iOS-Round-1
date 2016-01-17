@@ -9,6 +9,7 @@
 #import "DetailsViewController.h"
 #import "Weather.h"
 #import "WeatherDetailsTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DetailsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSMutableArray *weatherForecastMutableArray;
@@ -72,7 +73,9 @@
     Weather *weather = [self.weatherForecastMutableArray objectAtIndex:indexPath.row];
     
     WeatherDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WeatherForecastCellID"];
-    cell.icon.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:weather.iconUrl]]];
+    
+    [cell.icon sd_setImageWithURL:[NSURL URLWithString:weather.iconUrl] placeholderImage:[UIImage imageNamed:@"test"]];
+    
     cell.summary.text = [NSString stringWithFormat:@"Summary: %@",weather.summary];
     cell.maxTemp.text = [NSString stringWithFormat:@"Max: %@", weather.max_temp];
     cell.minTemp.text = [NSString stringWithFormat:@"Min: %@", weather.min_temp];
