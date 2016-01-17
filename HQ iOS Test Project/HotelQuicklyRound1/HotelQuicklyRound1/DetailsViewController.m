@@ -26,6 +26,33 @@
     
 }
 
+-(NSDateFormatter*)modifyDateFormatter {
+    static NSDateFormatter *modifyDateFormatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        modifyDateFormatter = [NSDateFormatter new];
+        [modifyDateFormatter setDateFormat:@"yyyy-MM-dd"];
+    });
+    return modifyDateFormatter;
+}
+
+-(NSDateFormatter*)formatter {
+    static NSDateFormatter *formatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        formatter = [NSDateFormatter new];
+        [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    });
+    return formatter;
+}
+
+
+-(void)createDateTimeFormatter:(NSString *)dateString forWeather:(Weather*)weather {
+    
+    NSDate *date = [[self formatter] dateFromString:dateString];
+    weather.timeString = [[self modifyDateFormatter] stringFromDate:date];
+}
+
 #pragma mark - table
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -42,6 +69,10 @@
     
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
 #pragma mark - retrieve weather forecast
 -(void)retrieveWeatherForecastForSelectedCity {
     
@@ -55,6 +86,8 @@
         weather.iconUrl = [weatherForecast objectForKey:@"iconUrl"];
         weather.summary = [weatherForecast valueForKeyPath:@"summary"];
         weather.timeString = [weatherForecast valueForKeyPath:@"timeString"];
+        
+        [self createDateTimeFormatter:weather.timeString forWeather:weather];
         
         [self.weatherForecastMutableArray addObject:weather];
     }
