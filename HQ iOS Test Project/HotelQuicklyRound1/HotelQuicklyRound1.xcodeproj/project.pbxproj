@@ -14,6 +14,8 @@
 		695D975A1C4B48E500D242F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695D97591C4B48E500D242F8 /* Assets.xcassets */; };
 		695D975D1C4B48E500D242F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695D975B1C4B48E500D242F8 /* LaunchScreen.storyboard */; };
 		695D97671C4B64C900D242F8 /* country_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 695D97661C4B64C900D242F8 /* country_data.json */; };
+		695D976A1C4B783300D242F8 /* CitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D97691C4B783300D242F8 /* CitiesViewController.m */; };
+		695D976D1C4B7AE500D242F8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695D976C1C4B7AE500D242F8 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		695D975C1C4B48E500D242F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		695D975E1C4B48E500D242F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		695D97661C4B64C900D242F8 /* country_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = country_data.json; path = ../../country_data.json; sourceTree = "<group>"; };
+		695D97681C4B783300D242F8 /* CitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesViewController.h; sourceTree = "<group>"; };
+		695D97691C4B783300D242F8 /* CitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesViewController.m; sourceTree = "<group>"; };
+		695D976B1C4B7AE500D242F8 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		695D976C1C4B7AE500D242F8 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,10 @@
 				695D97531C4B48E500D242F8 /* ViewController.h */,
 				695D97541C4B48E500D242F8 /* ViewController.m */,
 				695D97561C4B48E500D242F8 /* Main.storyboard */,
+				695D97681C4B783300D242F8 /* CitiesViewController.h */,
+				695D97691C4B783300D242F8 /* CitiesViewController.m */,
+				695D976B1C4B7AE500D242F8 /* DetailsViewController.h */,
+				695D976C1C4B7AE500D242F8 /* DetailsViewController.m */,
 				695D97591C4B48E500D242F8 /* Assets.xcassets */,
 				695D975B1C4B48E500D242F8 /* LaunchScreen.storyboard */,
 				695D975E1C4B48E500D242F8 /* Info.plist */,
@@ -154,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				695D97551C4B48E500D242F8 /* ViewController.m in Sources */,
+				695D976D1C4B7AE500D242F8 /* DetailsViewController.m in Sources */,
+				695D976A1C4B783300D242F8 /* CitiesViewController.m in Sources */,
 				695D97521C4B48E500D242F8 /* AppDelegate.m in Sources */,
 				695D974F1C4B48E500D242F8 /* main.m in Sources */,
 			);
