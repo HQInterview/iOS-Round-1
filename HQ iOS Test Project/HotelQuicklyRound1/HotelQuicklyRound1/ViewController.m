@@ -14,6 +14,7 @@
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *countryTableView;
 @property (strong, nonatomic) NSMutableArray *countriesMutableArray;
+@property (strong, nonatomic) NSMutableArray *animatedMutableArray;
 
 @end
 
@@ -23,6 +24,7 @@
     [super viewDidLoad];
     
     self.title = @"Countries";
+    self.animatedMutableArray = [NSMutableArray new];
     self.countriesMutableArray = [NSMutableArray new];
     [self retrieveCountryInfoFromCountryDataJSON];
     
@@ -41,10 +43,39 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CountryCellID"];
     
     cell.textLabel.text = country.country_name;
+    cell.textLabel.font = [UIFont systemFontOfSize:20];
     
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:country.flag_image_url] placeholderImage:[UIImage imageNamed:@"test"]];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (![self.animatedMutableArray containsObject:indexPath]) {
+        if (indexPath.row % 2 == 0) {
+            
+            cell.layer.transform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0);
+            
+            [UIView animateWithDuration:1 animations:^{
+                
+                cell.layer.transform = CATransform3DIdentity;
+                
+            }];
+            
+        } else {
+            
+            
+            cell.layer.transform = CATransform3DTranslate(CATransform3DIdentity, 500, 10, 0);
+            
+            [UIView animateWithDuration:1 animations:^{
+                
+                cell.layer.transform = CATransform3DIdentity;
+            }];
+        }
+        
+        [self.animatedMutableArray addObject:indexPath];
+    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

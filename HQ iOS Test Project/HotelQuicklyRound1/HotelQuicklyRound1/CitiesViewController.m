@@ -13,6 +13,7 @@
 @interface CitiesViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *citiesTableView;
 @property (strong, nonatomic) NSMutableArray *cityMutableArray;
+@property (strong, nonatomic) NSMutableArray *fadedInMutableArray;
 
 @end
 
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     
     self.title = self.country.country_name;
+    self.fadedInMutableArray = [NSMutableArray new];
     self.cityMutableArray = [NSMutableArray new];
     [self retrieveCityInfoFromSelectedCountry];
 
@@ -37,8 +39,24 @@
     
     City *city = [self.cityMutableArray objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CitiesCellID"];
+    
     cell.textLabel.text = city.city_name;
+    cell.textLabel.font = [UIFont systemFontOfSize:20];
+    
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (![self.fadedInMutableArray containsObject:indexPath]) {
+        
+        cell.alpha = 0;
+        
+        [UIView animateWithDuration:1 animations:^{
+            cell.alpha = 1.0f;
+            [self.fadedInMutableArray addObject:indexPath];
+        }];
+    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
