@@ -101,7 +101,6 @@
                 cell.layer.transform = CATransform3DIdentity;
             }];
         }
-        
         [self.animatedMutableArray addObject:indexPath];
     }
 }
