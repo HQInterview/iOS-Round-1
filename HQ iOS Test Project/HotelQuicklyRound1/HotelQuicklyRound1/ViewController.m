@@ -28,10 +28,32 @@
     self.countriesMutableArray = [NSMutableArray new];
     
     self.countryTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
     [self retrieveCountryInfoFromCountryDataJSON];
+    [self createGradientBackground];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     
 }
+
+-(void)createGradientBackground {
+    
+    [self.countryTableView setBackgroundColor:[UIColor clearColor]];
+    UIColor *topColor = [UIColor colorWithRed:0.11 green:0.17 blue:0.39 alpha:1];
+    UIColor *bottomColor = [UIColor colorWithRed:0.97 green:0.80 blue:0.86 alpha:1];
+    NSArray *gradientColors = [NSArray arrayWithObjects:(id)topColor.CGColor, (id)bottomColor.CGColor, nil];
+    NSArray *gradientLocations = [NSArray arrayWithObjects:[NSNumber numberWithInt:0.0],[NSNumber numberWithInt:1.0], nil];
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.colors = gradientColors;
+    gradientLayer.locations = gradientLocations;
+    gradientLayer.frame = self.view.frame;
+    
+    UIView *gradientView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [gradientView.layer addSublayer:gradientLayer];
+    
+    [self.view addSubview:gradientView];
+    [self.view sendSubviewToBack:gradientView];
+}
+
 
 #pragma mark - table
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -54,6 +76,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     if (![self.animatedMutableArray containsObject:indexPath]) {
         if (indexPath.row % 2 == 0) {
@@ -88,7 +114,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 60;
 }
 
 #pragma mark - country info

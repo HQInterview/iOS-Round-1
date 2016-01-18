@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lTg-OQ-Xwt">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCellID" textLabel="Tlp-29-PL2" style="IBUITableViewCellStyleDefault" id="Lv3-9t-WAj">
@@ -47,7 +47,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lTg-OQ-Xwt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HiF-yH-pK4"/>
+                            <constraint firstItem="lTg-OQ-Xwt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="HiF-yH-pK4"/>
                             <constraint firstAttribute="trailing" secondItem="lTg-OQ-Xwt" secondAttribute="trailing" id="N3j-He-qyZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lTg-OQ-Xwt" secondAttribute="bottom" id="SqK-4B-sKg"/>
                             <constraint firstItem="lTg-OQ-Xwt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eLs-1f-MUl"/>
@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0hY-Iz-zop">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CitiesCellID" id="9Q9-ru-Mfn">
@@ -96,7 +96,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0hY-Iz-zop" firstAttribute="top" secondItem="kHy-Sd-JPz" secondAttribute="top" id="Itp-fb-Hun"/>
+                            <constraint firstItem="0hY-Iz-zop" firstAttribute="top" secondItem="kHy-Sd-JPz" secondAttribute="top" constant="64" id="Itp-fb-Hun"/>
                             <constraint firstItem="W6E-Pf-bE4" firstAttribute="top" secondItem="0hY-Iz-zop" secondAttribute="bottom" id="XAc-f3-t31"/>
                             <constraint firstAttribute="trailing" secondItem="0hY-Iz-zop" secondAttribute="trailing" id="bAe-AP-Vkr"/>
                             <constraint firstItem="0hY-Iz-zop" firstAttribute="leading" secondItem="kHy-Sd-JPz" secondAttribute="leading" id="uQZ-aW-pUS"/>

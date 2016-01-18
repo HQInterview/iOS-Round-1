@@ -25,11 +25,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = self.city.city_name;
+    
     self.weatherForecastMutableArray = [NSMutableArray new];
     self.animatedCell = [NSMutableArray new];
     [self createGradientBackground];
     [self retrieveWeatherForecastForSelectedCity];
     [self stylingTemperatureStatementLabel];
+
 }
 
 -(void)stylingTemperatureStatementLabel {
@@ -159,6 +162,7 @@
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeString" ascending:TRUE];
         [self.weatherForecastMutableArray sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     }
+    [self.weatherForecastMutableArray removeLastObject];
 }
 
 
