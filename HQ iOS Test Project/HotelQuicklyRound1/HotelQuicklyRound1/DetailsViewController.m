@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSDictionary *city_daily_weather;
 @property (weak, nonatomic) IBOutlet UITableView *weatherForecastTableView;
 @property (weak, nonatomic) IBOutlet UILabel *temperatureStatement;
+@property (strong, nonatomic) NSMutableArray *animatedCell;
 
 @end
 
@@ -25,14 +26,37 @@
     [super viewDidLoad];
     
     self.weatherForecastMutableArray = [NSMutableArray new];
+    self.animatedCell = [NSMutableArray new];
+    [self createGradientBackground];
     [self retrieveWeatherForecastForSelectedCity];
+    [self stylingTemperatureStatementLabel];
+}
+
+-(void)stylingTemperatureStatementLabel {
     
     self.temperatureStatement.text = @"All temperature are displayed in Celcius";
+    self.temperatureStatement.textColor = [UIColor whiteColor];
     self.temperatureStatement.font = [UIFont systemFontOfSize:12];
+    self.temperatureStatement.backgroundColor = [UIColor clearColor];
+}
+
+-(void)createGradientBackground {
     
-    self.weatherForecastTableView.backgroundColor = [UIColor colorWithRed:0.70 green:0.70 blue:0.70 alpha:1];
-    self.view.backgroundColor = [UIColor colorWithRed:0.70 green:0.70 blue:0.70 alpha:1];
-    self.temperatureStatement.backgroundColor = [UIColor colorWithRed:0.70 green:0.70 blue:0.70 alpha:1];
+    [self.weatherForecastTableView setBackgroundColor:[UIColor clearColor]];
+    UIColor *topColor = [UIColor colorWithRed:0.11 green:0.17 blue:0.39 alpha:1];
+    UIColor *bottomColor = [UIColor colorWithRed:0.97 green:0.80 blue:0.86 alpha:1];
+    NSArray *gradientColors = [NSArray arrayWithObjects:(id)topColor.CGColor, (id)bottomColor.CGColor, nil];
+    NSArray *gradientLocations = [NSArray arrayWithObjects:[NSNumber numberWithInt:0.0],[NSNumber numberWithInt:1.0], nil];
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.colors = gradientColors;
+    gradientLayer.locations = gradientLocations;
+    gradientLayer.frame = self.view.frame;
+    
+    UIView *gradientView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [gradientView.layer addSublayer:gradientLayer];
+    
+    [self.view addSubview:gradientView];
+    [self.view sendSubviewToBack:gradientView];
 }
 
 -(NSDateFormatter*)modifyDateFormatter {
@@ -87,7 +111,28 @@
     }
 
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(WeatherDetailsTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (![self.animatedCell containsObject:indexPath]) {
+        cell.icon.layer.transform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0);
+        cell.maxTemp.layer.transform = CATransform3DTranslate(CATransform3DIdentity, 500, 10, 0);
+        cell.minTemp.layer.transform = CATransform3DTranslate(CATransform3DIdentity, 500, 10, 0);
+        cell.summary.layer.transform = CATransform3DTranslate(CATransform3DIdentity, 500, 10, 0);
+        
+        
+        [UIView animateWithDuration:1 animations:^{
+            
+            cell.icon.layer.transform = CATransform3DIdentity;
+            cell.maxTemp.layer.transform = CATransform3DIdentity;
+            cell.minTemp.layer.transform = CATransform3DIdentity;
+            cell.summary.layer.transform = CATransform3DIdentity;
+            
+        }];
+        
+        [self.animatedCell addObject:indexPath];
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

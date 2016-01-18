@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q2o-Q5-ES5">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="570"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="506"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherForecastCellID" rowHeight="150" id="b0N-fg-PWT" customClass="WeatherDetailsTableViewCell">
@@ -209,7 +209,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2K-MN-nVf">
-                                <rect key="frame" x="20" y="577" width="560" height="21"/>
+                                <rect key="frame" x="20" y="576" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -217,7 +217,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="q2o-Q5-ES5" firstAttribute="top" secondItem="Jjl-Ui-7mb" secondAttribute="top" id="Ph4-et-jyu"/>
+                            <constraint firstItem="q2o-Q5-ES5" firstAttribute="top" secondItem="Jjl-Ui-7mb" secondAttribute="top" constant="64" id="Ph4-et-jyu"/>
                             <constraint firstAttribute="trailing" secondItem="N2K-MN-nVf" secondAttribute="trailing" constant="20" id="Pxx-KJ-nyK"/>
                             <constraint firstAttribute="trailing" secondItem="q2o-Q5-ES5" secondAttribute="trailing" id="eLp-H8-BwW"/>
                             <constraint firstItem="lDz-NJ-ZaR" firstAttribute="top" secondItem="N2K-MN-nVf" secondAttribute="bottom" constant="3" id="frh-L1-iAj"/>

@@ -68,7 +68,6 @@
             
         } else {
             
-            
             cell.layer.transform = CATransform3DTranslate(CATransform3DIdentity, 500, 10, 0);
             
             [UIView animateWithDuration:1 animations:^{
